@@ -36,7 +36,6 @@ public class TemperaSimulada {
 				
 			}
 			
-			//temperatura = 1/tempo;
 			temperatura = k*Math.exp(-alfa*tempo);
 			vizinho = problema.copiaArray(noAtual.getPosicaoRainhas());
 			int coluna = rand.nextInt(8);
