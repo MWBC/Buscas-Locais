@@ -13,16 +13,13 @@ public class TemperaSimulada {
 	public void Busca(Problema8Rainhas problema) {
 		
 		Random rand = new Random();
-		int delta;
-		int k = 20;
 		double temperatura;
 		No noAtual = problema.getNo();
 		No vizinho = new No();
-		double alfa = 0.03;
 		System.out.println("--------------------TABULEIRO INICIAL-----------------------");
 		problema.imprimeTabuleiro(noAtual);
 		
-		for(double tempo = 0; tempo < 10000; tempo++) {
+		for(double tempo = 0; tempo < 10000; tempo+= 0.03) {
 			
 			if(problema.calculaCustoAtual(noAtual.getPosicaoRainhas(), noAtual.getTabuleiro()) == 0) {
 				
@@ -36,8 +33,7 @@ public class TemperaSimulada {
 				
 			}
 			
-			//temperatura = 1/tempo;
-			temperatura = k*Math.exp(-alfa*tempo);
+			temperatura = 1/x;
 			vizinho = problema.copiaArray(noAtual.getPosicaoRainhas());
 			int coluna = rand.nextInt(8);
 			vizinho.setPosicaoRainhas(coluna, (rand.nextInt(8)*10) + coluna);
