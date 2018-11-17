@@ -32,7 +32,7 @@ public class TemperaSimulada {
 				return;
 				
 			}
-			
+			//teste
 			temperatura = 1/x;
 			vizinho = problema.copiaArray(noAtual.getPosicaoRainhas());
 			int coluna = rand.nextInt(8);
